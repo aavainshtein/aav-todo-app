@@ -28,14 +28,14 @@ function submit() {
       <input v-model="newTaskTitle" placeholder="Новая задача..." />
       <button type="submit">Добавить</button>
     </div>
-    <span v-if="error" class="error">{{ error }}</span>
+    <div class="error">{{ error }}</div>
   </form>
-  <!-- {{ store.state.tasks }} -->
 </template>
 
 <style scoped>
 .task-form {
   display: flex;
+  flex-direction: column;
   align-items: center;
   flex-wrap: wrap;
   gap: 0.5rem;
@@ -43,11 +43,11 @@ function submit() {
 }
 .input-group {
   display: flex;
+  width: 100%;
   gap: 0.5rem;
 }
 input {
   flex: 1;
-  padding: 0.5rem;
   border-radius: 4px;
   border: 1px solid #ccc;
 }
@@ -60,8 +60,10 @@ button {
   cursor: pointer;
 }
 .error {
+  width: 100%;
   color: #d00;
   margin-left: 0.5rem;
   font-size: 0.9em;
+  min-height: 1.5em;
 }
 </style>
