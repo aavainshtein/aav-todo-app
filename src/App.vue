@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import TaskForm from './components/TaskForm.vue'
 import TaskList from './components/TaskList.vue'
+import TaskFilter from './components/TaskFilter.vue'
 import { useStore } from 'vuex'
 import { onMounted } from 'vue'
 
@@ -15,6 +16,7 @@ onMounted(() => {
     <h1>Todo App</h1>
     <div style="margin-bottom: 1rem">
       <TaskForm />
+      <TaskFilter />
       <TaskList />
     </div>
   </div>
@@ -28,5 +30,6 @@ onMounted(() => {
   border-radius: 8px;
   box-shadow: 0 2px 8px #0001;
   padding: 2rem;
+  font-size: large;
 }
 </style>
