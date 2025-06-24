@@ -2,6 +2,7 @@
 import TaskForm from './components/TaskForm.vue'
 import TaskList from './components/TaskList.vue'
 import TaskFilter from './components/TaskFilter.vue'
+import DelayEditor from './components/DelayEditor.vue'
 import { useStore } from 'vuex'
 import { onMounted } from 'vue'
 
@@ -13,16 +14,24 @@ onMounted(() => {
 
 <template>
   <div class="todo-app">
-    <h1>Todo App</h1>
+    <h1 class="header">Todo App</h1>
     <div style="margin-bottom: 1rem">
       <TaskForm />
       <TaskFilter />
       <TaskList />
     </div>
+    <DelayEditor style="margin-top: 3rem" />
   </div>
 </template>
 
 <style scoped>
+.header {
+  text-align: center;
+  color: #42b983;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
 .todo-app {
   max-width: 500px;
   margin: 2rem auto;
