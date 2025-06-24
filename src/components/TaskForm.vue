@@ -30,7 +30,7 @@ function submit() {
     </div>
     <span v-if="error" class="error">{{ error }}</span>
   </form>
-  {{ store.state.tasks }}
+  <!-- {{ store.state.tasks }} -->
 </template>
 
 <style scoped>
